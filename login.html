@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Веб</title>
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="root">
+    <div class="app">
+      <header class="header">
+        <div class="header__container">
+          <a class="header__logo" href="/">
+            <h4 class="logo">1_STORE</h4>
+          </a>
+
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="/" class="menu__link">
+                  <span>Каталог</span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="/cart" class="menu__link basket-link">
+                  <span class="basket-link__text">Корзина</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </header>
+
+      <main class="page">
+        <div class="login">
+          <div class="login__container">
+            <div class="login__block">
+              <form class="login__form" onsubmit="onSubmit(event)">
+                <input type="text" placeholder="Имя" class="form__input input" name="name" maxlength="15" required value="" onchange="handleChange(event)" />
+
+                <input type="email" placeholder="E-mail" class="form__input input" name="login" maxlength="60" required value="" onchange="handleChange(event)" />
+
+                <input type="password" placeholder="Пароль" class="form__input input" name="password" maxlength="30" required value="" onchange="handleChange(event)" />
+
+                <button type="submit" class="btn btn-primary login__btn">
+                  Войти
+                </button>
+              </form>
+
+              <div class="auth-bottom">
+                <div>
+                  Уже есть аккаунт?
+                  <a href="/login">Войти</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <span>Made by </span>
+          <a class="footer__link" href="https://t.me/r_nikita1 ">
+            @r_nikita1
+          </a>
+          <span>Copyright © 2025</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

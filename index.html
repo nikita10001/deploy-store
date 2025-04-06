@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Веб</title>
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="root">
+    <div class="app">
+      <header class="header">
+        <div class="header__container">
+          <a class="header__logo" href="/">
+            <h4 class="logo">1_STORE</h4>
+          </a>
+
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="/" class="menu__link">
+
+                  <span>Каталог</span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="/cart" class="menu__link basket-link">
+                  <span class="basket-link__text">Корзина</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </header>
+
+      <main class="page">
+        <div class="page__catalog catalog">
+          <div class="catalog__container">
+            <div class="catalog__filters" id="filtersContainer">
+              <div class="filters">
+                <div class="filters__wrapper" id="filtersWrapper">
+                  <div class="filters__top" id="filtersToggle">
+                    <h3 class="filters__title">Фильтры</h3>
+                    <button class="filters__btn" id="clearFilters" style="display: none;">Сбросить всё x</button>
+                  </div>
+
+                  <div class="filters__body">
+                    <div class="filters__filter filter">
+                      <h4 class="filter__title">Производитель</h4>
+                      <select class="input" id="brandSelect">
+                        <option value="">Выберете производителя</option>
+                      </select>
+                    </div>
+
+                    <div class="filters__filter filter">
+                      <h4 class="filter__title">Цена</h4>
+                      <input class="filter__input input" id="priceFrom" placeholder="От" type="number" />
+                      <input class="filter__input input" id="priceTo" placeholder="До" type="number" />
+                    </div>
+                  </div>
+
+                  <button class="btn" id="applyFilters">Применить</button>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__body">
+              <div class="catalog__top">
+                <div class="catalog__search search-devices">
+                  <div class="search-devices__wrapper">
+                    <input class="search-devices__input input" placeholder="Поиск" />
+                  </div>
+                </div>
+                <select class="select">
+                  <option class="option" value="" disabled selected>По умолчанию</option>
+                  <option class="option" value="name">По названию</option>
+                  <option class="option" value="price">По цене</option>
+                  <option class="option" value="rating">По рейтингу</option>
+                  <option class="option" value="commentsAmount">С отзывами</option>
+                </select>
+
+              </div>
+              <div class="devices">
+                <div class="devices__wrapper">
+                  <article class="devices__card device-card">
+                    <a href="/main/2" class="device-card__image">
+                      <span class="device-card__item-image-ibg device-card__item-image-ibg_contain">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202301?wid=470&hei=556&fmt=png-alpha&.v=1671304673229" alt="Картинка" />
+                      </span>
+                    </a>
+                    <div class="device-card__body">
+                      <h4 class="device-card__title">
+                        <a href="/main/2" class="device-card__link-title">
+                          Ноутбук MacBook Pro 16
+                        </a>
+                      </h4>
+                      <div class="device-card__rating rating">
+                        <div class="rating__value">
+                          <span class="rating__info">4.9</span>
+                        </div>
+                      </div>
+                      <div class="device-card__footer">
+                        <div class="device-card__price">249990 р.</div>
+                      </div>
+                      <button disabled="false" type="submit" class="device-card__cart btn">
+                        <!-- <svg class="cart-icon">
+                        </svg> -->
+                        <span>В корзину</span>
+                      </button>
+                    </div>
+                  </article>
+                  <article class="devices__card device-card">
+                    <a href="/main/2" class="device-card__image">
+                      <span class="device-card__item-image-ibg device-card__item-image-ibg_contain">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202301?wid=470&hei=556&fmt=png-alpha&.v=1671304673229" alt="Картинка" />
+                      </span>
+                    </a>
+                    <div class="device-card__body">
+                      <h4 class="device-card__title">
+                        <a href="/main/2" class="device-card__link-title">
+                          Ноутбук MacBook Pro 16
+                        </a>
+                      </h4>
+                      <div class="device-card__rating rating">
+                        <div class="rating__value">
+                          <span class="rating__info">4.9</span>
+                        </div>
+                      </div>
+                      <div class="device-card__footer">
+                        <div class="device-card__price">249990 р.</div>
+                      </div>
+                      <button disabled="false" type="submit" class="device-card__cart btn">
+                        <!-- <svg class="cart-icon">
+                        </svg> -->
+                        <span>В корзину</span>
+                      </button>
+                    </div>
+                  </article>
+                  <article class="devices__card device-card">
+                    <a href="/main/2" class="device-card__image">
+                      <span class="device-card__item-image-ibg device-card__item-image-ibg_contain">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202301?wid=470&hei=556&fmt=png-alpha&.v=1671304673229" alt="Картинка" />
+                      </span>
+                    </a>
+                    <div class="device-card__body">
+                      <h4 class="device-card__title">
+                        <a href="/main/2" class="device-card__link-title">
+                          Ноутбук MacBook Pro 16
+                        </a>
+                      </h4>
+                      <div class="device-card__rating rating">
+                        <div class="rating__value">
+                          <span class="rating__info">4.9</span>
+                        </div>
+                      </div>
+                      <div class="device-card__footer">
+                        <div class="device-card__price">249990 р.</div>
+                      </div>
+                      <button disabled="false" type="submit" class="device-card__cart btn">
+                        <!-- <svg class="cart-icon">
+                        </svg> -->
+                        <span>В корзину</span>
+                      </button>
+                    </div>
+                  </article>
+                  <article class="devices__card device-card">
+                    <a href="/main/2" class="device-card__image">
+                      <span class="device-card__item-image-ibg device-card__item-image-ibg_contain">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202301?wid=470&hei=556&fmt=png-alpha&.v=1671304673229" alt="Картинка" />
+                      </span>
+                    </a>
+                    <div class="device-card__body">
+                      <h4 class="device-card__title">
+                        <a href="/main/2" class="device-card__link-title">
+                          Ноутбук MacBook Pro 16
+                        </a>
+                      </h4>
+                      <div class="device-card__rating rating">
+                        <div class="rating__value">
+                          <span class="rating__info">4.9</span>
+                        </div>
+                      </div>
+                      <div class="device-card__footer">
+                        <div class="device-card__price">249990 р.</div>
+                      </div>
+                      <button disabled="false" type="submit" class="device-card__cart btn">
+                        <!-- <svg class="cart-icon">
+                        </svg> -->
+                        <span>В корзину</span>
+                      </button>
+                    </div>
+                  </article>
+
+                  <article class="devices__card device-card">
+                    <a href="/main/2" class="device-card__image">
+                      <span class="device-card__item-image-ibg device-card__item-image-ibg_contain">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202301?wid=470&hei=556&fmt=png-alpha&.v=1671304673229" alt="Картинка" />
+                      </span>
+                    </a>
+                    <div class="device-card__body">
+                      <h4 class="device-card__title">
+                        <a href="/main/2" class="device-card__link-title">
+                          Ноутбук MacBook Pro 16
+                        </a>
+                      </h4>
+                      <div class="device-card__rating rating">
+                        <div class="rating__value">
+                          <span class="rating__info">4.9</span>
+                        </div>
+                      </div>
+                      <div class="device-card__footer">
+                        <div class="device-card__price">249990 р.</div>
+                      </div>
+                      <button disabled="false" type="submit" class="device-card__cart btn">
+                        <!-- <svg class="cart-icon">
+                        </svg> -->
+                        <span>В корзину</span>
+                      </button>
+                    </div>
+                  </article>
+
+                  <article class="devices__card device-card">
+                    <a href="/main/2" class="device-card__image">
+                      <span class="device-card__item-image-ibg device-card__item-image-ibg_contain">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202301?wid=470&hei=556&fmt=png-alpha&.v=1671304673229" alt="Картинка" />
+                      </span>
+                    </a>
+                    <div class="device-card__body">
+                      <h4 class="device-card__title">
+                        <a href="/main/2" class="device-card__link-title">
+                          Ноутбук MacBook Pro 16
+                        </a>
+                      </h4>
+                      <div class="device-card__rating rating">
+                        <div class="rating__value">
+                          <span class="rating__info">4.9</span>
+                        </div>
+                      </div>
+                      <div class="device-card__footer">
+                        <div class="device-card__price">249990 р.</div>
+                      </div>
+                      <button disabled="false" type="submit" class="device-card__cart btn">
+                        <!-- <svg class="cart-icon">
+                        </svg> -->
+                        <span>В корзину</span>
+                      </button>
+                    </div>
+                  </article>
+
+                  <article class="devices__card device-card">
+                    <a href="/main/2" class="device-card__image">
+                      <span class="device-card__item-image-ibg device-card__item-image-ibg_contain">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202301?wid=470&hei=556&fmt=png-alpha&.v=1671304673229" alt="Картинка" />
+                      </span>
+                    </a>
+                    <div class="device-card__body">
+                      <h4 class="device-card__title">
+                        <a href="/main/2" class="device-card__link-title">
+                          Ноутбук MacBook Pro 16
+                        </a>
+                      </h4>
+                      <div class="device-card__rating rating">
+                        <div class="rating__value">
+                          <span class="rating__info">4.9</span>
+                        </div>
+                      </div>
+                      <div class="device-card__footer">
+                        <div class="device-card__price">249990 р.</div>
+                      </div>
+                      <button disabled="false" type="submit" class="device-card__cart btn">
+                        <!-- <svg class="cart-icon">
+                        </svg> -->
+                        <span>В корзину</span>
+                      </button>
+                    </div>
+                  </article>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <span>Made by </span>
+          <a class="footer__link" href="https://t.me/r_nikita1 ">
+            @r_nikita1
+          </a>
+          <span>Copyright © 2025</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
