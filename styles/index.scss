@@ -1,0 +1,236 @@
+@use 'sass:math';
+@import './variables.scss';
+@import './null.scss';
+@import './UI.scss';
+@import './devices.scss';
+@import './header.scss';
+@import './filters.scss';
+@import './cart.scss';
+
+html,
+body,
+.app,
+#root {
+  height: 100%;
+  min-height: 100%;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.page {
+  flex: 1 1 100%;
+}
+.footer {
+  box-shadow: 0 -1px 2px 0 rgba(35, 31, 32, 0.15);
+  @media (max-width: 550px) {
+    padding-bottom: 47px;
+  }
+  &__container {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    justify-content: center;
+    @media (max-width: 768px) {
+      min-height: 40px;
+      font-weight: 400;
+    }
+  }
+  &__link {
+    color: $secondary;
+    font-weight: 500;
+  }
+}
+.page-preloader {
+  display: flex;
+  justify-content: center;
+  &__image {
+    max-width: 180px;
+    @media (max-width: 768px) {
+      max-width: 160px;
+    }
+    @media (max-width: 600px) {
+      max-width: 120px;
+    }
+  }
+}
+
+//temp styles
+.error-title {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0px;
+  font-weight: 500;
+}
+.error-password {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 14px;
+  color: red;
+}
+
+.page {
+  padding: 20px 0px;
+}
+.section-page {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 20px 0px;
+    gap: 10px;
+    button {
+      flex: 0 0 auto;
+      width: inherit;
+    }
+    @media (max-width: 768px) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
+  }
+}
+.catalog {
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    @media (max-width: 1000px) {
+      display: block;
+    }
+  }
+  &__filters {
+    flex: 0 0 300px;
+    @media (max-width: 1000px) {
+      margin: 0px 0px 20px 0px;
+    }
+    @media (max-width: 768px) {
+      margin: 0px 0px 10px 0px;
+    }
+  }
+  &__body {
+    flex: 0 1 100%;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px 0px;
+    select {
+      max-width: 200px;
+      align-self: flex-end;
+    }
+    @media (max-width: 768px) {
+      margin: 0px 0px 10px 0px;
+    }
+  }
+  &__search {
+    margin: 0px 0px 6px 0px;
+  }
+}
+
+.search-devices {
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    gap: 5px;
+    position: relative;
+    // border: 1px solid #d5d6dc;
+  }
+  &__input {
+    min-height: 34px;
+    padding: 7px 25px 7px 12px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    right: 7px;
+    position: absolute;
+    cursor: pointer;
+    svg {
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          path {
+            fill: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.form__input {
+  margin: 0px 0px 10px 0px;
+}
+.login {
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+.auth-bottom {
+  padding: 20px 0px;
+  text-align: center;
+  a {
+    color: $secondary;
+  }
+}
+
+.loader-title {
+  text-align: center;
+  padding: 30px 0px;
+  font-size: 22px;
+}
+
+.confirm-email {
+  &__container {
+  }
+  &__inner {
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+  }
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px 0px 10px 0px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+  &__input {
+    max-width: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  &__btn {
+  }
+}
